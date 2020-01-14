@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 第一个选择器：元素选择器
+            可以根据标签名来选中指定的元素
+        
+            p{
+                color:red;
+            } 
+        */
+        /* 
+        第二种选择器：只修改特定的地方
+        即id选择器,根据id选中某一个元素。
+        注意要#号
+            #selected{
+                color:red;
+            }
+         */
+        /* 
+        第三种选择器：id只能选中一个，为了改进有
+        类选择器。
+        class也是标签的属性，和id类似，但class可以重复使用
+        可以同时为一个元素指定对个class，多个class用空格隔开
+            .red{
+                color:red;
+            }
+        显然class是比较强大的
+         */
+         /* 
+            还有一种叫通配选择器
+            作用就是选中页面中的所有元素
+            *{
+                color:red;
+            }
+          */
+    </style>
+</head>
+<body>
+    <p>11111</p>
+    <p>22222</p>
+    <p id="selected">33333</p>
+    <p class="red blue">44444</p>
+    <p class="red">55555</p>
+    <p class="blue">66666</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+        为了实现自动选取ul中的某一行，采取伪类
+        伪类就是特殊的类
+            用来描述一个元素的特殊状态
+            比如第一个元素，被点击的元素，鼠标移入的元素
+            伪类一般情况下用:开头
+            :first-child 第一个子元素
+            :last-child 最后一个子元素
+            :nth-child() 选中第n个子元素，括号里的值就是n的值 
+                特殊值：
+                    n n的范围为0-正无穷，即选取所有元素
+                    2n（或是even） n的范围不变，2n变成选中偶数位的元素
+                    2n+1（或是odd） 类似的表示所有奇数位的元素
+            以上这些伪类的排序都是根据所有的子元素进行排序的
+
+            :first-of-type
+            :last-of-type
+            :nth-of-type()
+            上述三种跟上边的三种相似，区别仅在于type的是只对同类型的进行排序
+
+            :not() 叫做否定伪类，就是除了
+                将符合条件的元素从选择器中剔除
+         */
+         /* ul>li:first-child{
+             color:red;
+         }
+         ul>li:last-child{
+             color:red;
+         }
+         ul>li:nth-child(2){
+             color:red;
+         } */
+         ul>li:not(:nth-last-of-type(3)){
+             color:yellowgreen;
+         }
+         
+    </style>
+</head>
+<body>
+    <ul>
+        <span>xxx</span>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <!-- 
+        vscode可以根据css关系选择器生成标签
+        比如ul>li/5就是有5个的ul
+    -->
+</body>
+</html>

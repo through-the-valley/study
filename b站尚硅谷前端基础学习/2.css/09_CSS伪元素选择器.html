@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            ::first-letter 表示选中第一个字母
+            ::first-line 表示选中第一行
+            ::selection 表示鼠标选中内容
+            ::before 表示元素的起始位置（第一个字母之前）
+            ::after 表示元素的末尾位置（最后一个字母之后）
+                正常情况下起始位置和末尾位置是没有任何东西的
+                before和after必须结合content属性使用。
+                而且content中的内容是无法选中的
+            before和after是经常使用的
+         */
+        p::first-letter{
+            font-size:30;
+        }
+        p::first-line{
+            background-color: thistle;
+        }
+        p::selection{
+            background-color: teal;
+        }
+        p::before{
+            content:abc;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        伪元素表示页面中一些特殊的并不真实存在的元素（特殊的位置）
+        伪元素使用：：开头
+     -->
+     <p>男子汉就应该为了某个人变得坚强</p>
+</body>
+</html>

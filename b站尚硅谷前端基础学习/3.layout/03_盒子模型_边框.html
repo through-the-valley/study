@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height:200px;
+            background-color: #bfa;
+        /*
+            边框宽度：border-width
+            边框颜色：border-color  没有border-color会找color
+            边框风格：border-style 默认是none，即没有边框
+            这三个缺一不可。
+                当然实际上前两个是有默认值的，但是不妨碍我们必须写完整三个样式
+                border-width其实可以给4个值，赋值顺序是顺时针排列，上-右-下-左 中间用空格隔开
+                如果给了小于4个，会遵循上=下，左=右
+                除了border-width，还有border-top/right/bottom/left-width来精确的给出某一边的值.
+                上述规律对于color和style也是相同的
+
+                style：
+                -solid  实直线
+                -dotted 点
+                -dashed 虚线
+                -double 双线
+
+            不过写三个属性有点麻烦，所以有border的简写属性，而且没有顺序要求
+            当然这个简写也是可以设置四个边的，如border-top等
+            不想要边框给个none就可以
+         */
+            border-width: 10px;
+            border-color:aqua;
+            border-style:solid;
+
+
+            border: 10px aqua solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

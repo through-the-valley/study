@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio标签用于用来向页面引入一个外部的音频文件
+            音视频文件引入时默认情况下不允许用户自己控制播放停止
+            为了让用户操作需要加一个属性controls
+                controls：是否允许用户控制播放，不需要给值，想开启写上就可以了
+                autoplay：音频文件是否自动播放
+                    如果设置了autoplay，则音乐在我们打开页面时会自动播放
+                    但是目前来讲，大部分浏览器都不会确实的执行
+                    可以说autoplay不是很好使
+                loop是是否循环部分
+            audio ie8是不支持的。而且不同浏览器中，controls里的播放器外观是不同的。因此需要css+js来统一
+            除了通过src来指定外部文件的路径以外还可以用source来指定文件
+            这种方法是用来给ie8用户提醒更换浏览器的（不支持标签会略过标签而显示文字，文字只有在=在出现问题时才显示）
+            而且source可以写多个，这个是以前为了防止有些浏览器对音频的兼容问题。浏览器会优先使用第一个，能用就结束，不能用再看下一个source
+        embed是给老版本的浏览器使用音视频用的,而且是自动播放
+            必须指定width和height才能控制播放器大小，可以说这个标签并不怎么好用
+            type是用来指定格式的
+            总的来说不推荐使用，如果是为了兼容性，建议将其放进audio里，source的最下面
+     -->
+     <audio src=""  controls autoplay></audio>
+     <audio controls>
+         对不起您的浏览器不支持播放音频，请升级浏览器
+        <source src="">
+        <source src="">
+     </audio>
+     <audio controls>
+           <source src="">
+           <source src="">
+            <embed src="" type="audio/mp3">
+    </audio>
+    <!-- 
+        video引入视频文件，基本跟audio是一样的
+        使用webm格式同样会出现兼容性问题。所以同样可以考虑写两个source，一个是webm，一个是mp4
+        如果考虑ie8的问题，那就是在source的最后加embed
+     -->
+     <video controls>
+         <source src="">
+     </video>
+     <!-- 
+         考虑到视频音频文件很大，一般不会直接放在服务器上。
+         因此一般需要另一个服务商用来托管音视频（带宽磁盘都有限）
+         还有一种方式是将我们自己的视频上传到视频网站，（也就是说直接用视频网站的视频）然后将链接拉过来
+         上面的方法原理就是iframe，代价是美观度不是很够
+      -->
+</body>
+</html>

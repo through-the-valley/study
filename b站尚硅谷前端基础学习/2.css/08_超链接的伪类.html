@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+            :link 用来表示没访问的链接(正常的链接)
+            :visited 用来表示访问过的链接
+            上面两个只有a才能用
+            :hover 用来表示鼠标移入的状态
+            :active 用来表示鼠标点击的状态
+            这两个所有元素都可以
+         */
+        a:link{
+        color:red;
+        }
+        /* 
+            由于隐私的原因。我们并不希望别人知道我们的上网记录
+            所以:visited只能修改链接的颜色，大小背景等都不能修改
+            所以开发中不建议用:visited
+         */
+        a:visited{
+            color:blue;
+        }
+        a:hover{
+            color:yellowgreen;
+            font-size: 50;
+        }
+        a:active{
+            color:turquoise;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        超链接的几种状态
+            1.是否已被访问过
+     -->
+    <a href="www.baidu.com" target="blank"></a>
+</body>
+</html>

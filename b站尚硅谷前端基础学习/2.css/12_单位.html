@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+        长度单位：
+            像素
+                -显示器实际上是由一个一个小点组成的
+                -不同屏幕的像素大小是不同的。像素越小的屏幕显示效果越清晰
+                所以同样的200像素在不同的设备下显示效果不一样
+            
+            百分比
+                -也可以将属性值设计为父元素属性的百分比
+                -好处是可以跟随父元素变化而变化
+
+            em
+                -em是相对于自身元素的字体大小来计算的
+                -1em=1font-size
+                -一般浏览器1font-size是16像素
+                -em会根据字体大小改变而改变
+
+            rem
+                -rem是相对于根元素，也就是html的字体大小的
+                -也就是说只会根据html样式里的font-size改变
+                -移动端的适配会需要比较多的rem
+         */
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: chocolate;
+        }
+        .box2{
+            width: 50%;
+            height: 50%;
+            background-color: red;
+        }
+        .box3{
+            width:10em;
+            height:10em;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <!-- 可以用div.box1快速生成，其他类似可推,不加div默认生成的也是div -->
+</body>
+</html>

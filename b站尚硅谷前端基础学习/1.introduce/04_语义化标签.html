@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语义化标签</title>
+</head>
+<body>
+    <!-- 
+        网页中html专门负责网页结构
+            所以在html标签中应关注的是标签的语义而不是它的样式
+
+            标题标签：h1~h6共6级
+                从h1~h6重要性递减
+                h1在网页中的作用仅次于title
+                一般情况下一个页面中只会有一个h1
+                一般只会使用h1~h3
+            
+            在页面中独占一行的元素叫做块元素（block element）
+     -->
+     <h1>h1</h1>
+     <h2>h2</h2>
+     <h3>h3</h3>
+     <h4>h4</h4>
+     <h5>h5</h5>
+     <h6>h6</h6>
+
+     <!-- 
+        hgroup标签用来为标签分组，可将相关的一组标签放在一组中
+      -->
+     <hgroup>
+        <h1>回乡偶书</h1>
+        <h2>二首</h2>
+     </hgroup>
+        <!-- 
+            在p标签中的元素是一个段落。
+            p也是一个块元素
+        -->
+     <p>p</p>
+     <!-- 
+         em标签标示语音语调的加重
+         em是一个行内元素
+         在页面内不会独占一行的元素叫做行内元素（inline element）
+      -->
+     <p>nice <em>day</em> today</p>
+     <!-- 
+         strong标签标示强调
+         strong也是一个行内元素
+      -->
+     <p>nice day <strong>today</strong></p>
+     <!-- 
+         blockquote用于长引用，是一个块元素
+      -->
+     <blockquote>
+         生而为人
+     </blockquote>
+     <!-- 
+         q表示短引用，是一个行内元素
+      -->
+     <q>
+         我很抱歉
+     </q>
+     <br>
+</body>
+</html>

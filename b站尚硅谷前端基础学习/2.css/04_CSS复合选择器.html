@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 
+        将class为red的div设置为红色
+            此时有两个要求，相当于求red类和div的交集
+            div.red{
+                color:red;
+                font-size:30px;
+            }
+            这便是交集选择器，选择同时符合多个条件的元素
+            格式就是直接将选择器连着写就可以了
+            注意，交集选择器如果含有元素选择器，必须用元素选择器开头
+            因为id已经唯一标识元素，所以基本不需要用在交集选择器
+-----------------------------------------------------------
+        并集选择器，满足一个条件即可
+            格式是选择器之间用，隔开
+            感觉class就是简单的并集
+         */
+    </style>
+</head>
+<body>
+    <div class="red">div here</div>
+    <p class="red">p here</p>
+</body>
+</html>

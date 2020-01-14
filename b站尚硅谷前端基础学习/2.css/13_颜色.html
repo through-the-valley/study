@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+            在css中可以直接用颜色名来设置各种颜色。如red，green等
+            但是直接使用颜色名有很大局限性
+            所以常用RGB值来表示颜色，即三原色不同浓度进行调配
+                每一种颜色的范围在0-255之间
+                语法：RGB（红色，绿色，蓝色）
+
+            还有一个RGBA，A就是透明值，其他跟rgb是一样的，一共要4个值
+                1就是完全不透明，0是完全透明，.5表示半透明
+
+            RGB还可以用16进制表示
+                格式是#红色绿色蓝色
+                颜色浓度在0-FF之间
+                如果颜色两位重复可以简写：#aabbcc-》#abc
+
+            实际上除了rgb和rgba还有hsl和hsla
+                H 色相 色相的取值是0-360，可以理解为一个圆环
+                S 饱和度 颜色的浓度，范围是0%-100%
+                L 亮度 也是0%-100%
+            hsl用的还是比较少的，建议用rgb
+         */
+        .box1{
+            width:100px;
+            height:100px;
+            background-color: rgb(100, 100, 60);
+            background-color:#bbffaa;
+            background: hsl(0, 50, 80);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
