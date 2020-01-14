@@ -55,6 +55,17 @@
 ### 基础操作
 
 - git clone url 将仓库下载到本地。注意git bash里面复制粘贴是ctrl/shift+insert
-- git add-》 git commit来将修改提交到版本库，但此时远程的仍未更新。通过gitpush可以更新远程。commit时需要提交用户名和邮箱，按提示来即可。
+- git add-》 git commit来将修改提交到版本库，但此时远程的仍未更新。通过gitpush可以更新远程。commit时需要提交用户名和邮箱，即git config --global user.email xxx@xxx.com  或git config --global user.name xxx。commit是可以加上-m “xxx” 来添加此次的描述
 - git status可以查看当前仓库状态
 - git log查看仓库提交日志。对于commit后面的一长串代码，我们可以使用git show +代码来查看详细信息
+- git reset可以将commit的状态回滚。具体使用可以用reset+commit里的那长串代码
+
+### 如何解决冲突
+
+-  当与远端不同步时需要先pull。冲突部分会用等号和剪头区分。可以选择解决冲突之后再add和commit
+- 如果一直都在一个分支是会很麻烦的，所以需要区分不同的人在不同的分支上开发
+- git branch +分支名创建分支，git checkout xxx切换到指定分支。两者可以合并为 git checkout -b xxx，即创建并切换到某分支
+- 但是想要使用这个分支提交，需要在远端也存在一个上游分支。跟随提示操作即可
+- 使用git merge将分支合并
+- 实际上一般解决冲突是用ide实现的。
+
